@@ -1,0 +1,234 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    margin: 0;
+    padding: auto;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: auto; /* Adjusted width */
+    background-color: #f4f4f4;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.sidebar-logo {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border-bottom: 1px solid #ddd;
+}
+
+.sidebar ul li:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.sidebar ul li a {
+    color: #050607;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    transition: background 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+.sidebar ul li a:hover {
+    background-color: #cc9600;
+    color: #ffffff;
+}
+
+/* Submenu Styles */
+.sub-menu {
+    display: display-listitem; /* Hidden by default */
+    margin-left: 20px;
+    list-style-type: none;
+}
+
+.sub-sub-menu {
+    display: none; /* Hidden by default */
+    margin-left: 10px; /* More indentation for sub-sub-menu */
+}
+
+.expanded {
+    display: block; /* Show when expanded */
+}
+
+/* Main Content Styles */
+.main-content {
+    flex: 1;
+    padding: 20px;;
+}
+
+header {
+    background-color: #e89f0e;
+    color: #ffffff;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #0a0b0c;
+}
+
+p {
+    color: #333333;
+}
+
+/* Table of Contents Styles */
+ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+ul ul {
+    list-style-type: circle;
+    margin: 5px 0 10px 30px;
+}
+
+ul .sub-menu {
+    padding-left: 30px;
+    border-left: 2px solid #ddd;
+}
+
+ul ul .sub-sub-menu {
+    padding-left: 30px;
+    border-left: 2px solid #ddd;
+}
+
+ul li p {
+    margin: 5px 0 0 20px;
+    font-size: 0.875em;
+    color: #666666;
+}
+
+a {
+    color: #1a5289;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #09151d;
+    text-decoration: underline;
+}
+
+/* Image Styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+}
+
+/* Code Styling */
+pre {
+    background: #f4f4f4;
+    padding: 10px;
+    border-left: 5px solid #e89f0e;
+    overflow-x: auto;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #e0d3d3;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    flex-shrink: 0; /* Prevent footer from shrinking */
+}
+
+.secondary-text {
+    color: #666666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content {
+        margin-left: 100px;
+    }
+}
+
+/* Content Wrapper for Image and ToC */
+.content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 0px;
+    margin-bottom: 20px;
+}
+
+/* Image Section */
+.image-section {
+    flex: 1 0 auto; /* Flex-grow: 1, Flex-shrink: 0, Flex-basis: 200px (or adjust as needed) */
+}
+
+/* ToC Section */
+.toc-section {
+    flex: 1; /* Flex-grow: 2 (or adjust as needed) */
+    margin-left: 30px;
+}
+
+.toc-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.toc-section li {
+    margin-bottom: 10px;
+}
+
+.toc-section a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+.toc-section a:hover {
+    text-decoration: underline;
+}

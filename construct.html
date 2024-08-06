@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuzzWatch - Guide Building</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon"> <!-- Add this line for the favicon -->
+
+    <!-- Include highlight.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <!-- Include highlight.js JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <!-- Initialize highlight.js -->
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <img src="favicon_io/android-chrome-192x192.png" alt="Logo" class="sidebar-logo"> <!-- Add your logo image here -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#" class="toggle" data-target="#sub-menu-guides">Guides</a>
+                    <ul id="sub-menu-guides" class="sub-menu">
+                        <li>
+                            <a href="construct.html" class="toggle" data-target="#sub-sub-menu-building" data-url="construct.html">1 - Building</a>
+
+                        </li>
+                        <li>
+                            <a href="house.html" class="toggle" data-target="#sub-sub-menu-housing" data-url="house.html">2 - Housing</a>
+
+                        </li>
+                        <li>
+                            <a href="record.html" class="toggle" data-target="#sub-sub-menu-recording" data-url="record.html">3 - Recording</a>
+
+                        </li>
+                        <li>
+                            <a href="track.html" class="toggle" data-target="#sub-sub-menu-tracking " data-url="track.html">4 - Tracking</a>
+
+                        </li>
+                        <li>
+                            <a href="analyze.html" class="toggle" data-target="#sub-sub-menu-analyzing" data-url="analyze.html">5 - Analyzing</a>
+
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="examples.html">Complete set-up examples</a>
+                </li>
+                <li>
+                    <a href="questions.html">Help</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>Building with acrylic and Raspberry Pi</h1>
+            </header>
+            <article>
+                <img src="images/tower_im1.jpeg" alt="Example Image" style="width:100%; max-width:200px;">
+                <ul>
+                    <li><a href="#design-cage">1.1 - Design Acrylic Cage</a></li>
+                    <li><a href="#laser-cut">1.2 - Laser Cut Acrylic</a></li>
+                    <li><a href="#assembly">1.3 - Cage Assembly</a></li>
+                    <li><a href="#raspberry-pi">1.4 - Raspberry Pi Camera Set-Up</a></li>
+                    <li><a href="#optional-light">1.5 - [Optional] Raspberry Pi to Light</a></li>
+                    <li><a href="#optional-measure">1.6 - [Optional] Raspberry Pi to Measure the Environment</a></li>
+                </ul>
+
+                
+
+
+                <h2 id="design-cage">1 - Design Acrylic Cage</h2>
+                <p>The plan to use for laser cutting acrylic are vector .ai illustrator files, such as this one </p>
+                <img src="images/Plan_illustrator_example.jpeg" alt="Cage_illustrator_file_example" style="width:100%; max-width:600px;">
+                <!-- Download Link for .ai File -->
+                <p>All necessary files can be downloaded below: </p>
+                <a href="downloads/attach_towers.ai" download>attach_towers.ai</a>
+                <a href="downloads/Longtermv5_part1_3mm_diff.ai" download>Longtermv5_part1_3mm_diff.ai</a>
+                <a href="downloads/Longtermv5_part2_3mm_diff.ai" download>Longtermv5_part2_3mm_diff.ai</a>
+                <a href="downloads/Longtermv5_part3_3mm_trans.ai" download>Longtermv5_part3_3mm_trans.ai</a>
+                <a href="downloads/Longtermv5_part4_1mm.ai" download>Longtermv5_part4_1mm.ai</a>
+
+                <p> Most of the cage designs are based on this website <a href="https://boxes.hackerspace-bamberg.de" target="_blank">Boxes.py</a>.</p>
+
+                <p>All plans have been designed for 3mm PPMA or 1.5mm and a burn correction of 0.01. However, depending on the model of laser cutter or your specific design, you might have to modify the burning correction for a looser or tighter fit.</p>
+                <p><img src="images/boxpy_burning_change.jpg" alt="burning_correction" style="width:100%; max-width:600px;"></p>
+
+                <h2 id="laser-cut">Laser Cut Acrylic</h2>
+                <!-- Insert a .MP4 Video -->
+                <video controls width="600">
+                    <source src="videos/laser_cutter_movie_1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p><img src="images/laser_cutter_finish.jpeg" alt="burning_correction" style="width:100%; max-width:600px;"></p>
+
+                <p>Pre-assemble cage and test if it fits properly (it should stay together) [add video]</p>
+                <p><img src="images/cage_assemble_1.jpeg" alt="burning_correction" style="width:100%; max-width:600px;"></p>
+
+                <h2 id="assembly">Cage Assembly</h2>
+                <p>Once the laser cutting is finished, you can assemble most of the cage structure without glue.</p>
+
+                <p>Assemble sugar feeders and glue them.</p>
+                <p>Add 1.5mm windows. For the 1.5mm windows, it is necessary to glue them properly.</p>
+                <p>Assemble the main cage (no need for glue).</p>
+                <p>Assemble the structure and glue frames.</p>
+                <p>Add the holder for the cage and sugar feeders.</p>
+                
+                <h2 id="raspberry-pi">Raspberry Pi Camera Set-Up</h2>
+                <ul>
+                    <li>Raspberry Pi 4B+ : link</li>
+                    <li>PiCamera NOIR v2</li>
+                    <li>Camera connector</li>
+                    <li>IR filter</li>
+                    <li>External hard drive to store videos (T7 Samsung)</li>
+                </ul>
+
+                <h2 id="optional-light">[Optional] Raspberry Pi to Light</h2>
+                <p>Instructions for setting up Raspberry Pi to control lights.</p>
+
+                <h2 id="optional-measure">[Optional] Raspberry Pi to Measure the Environment</h2>
+                <p>Instructions for setting up Raspberry Pi to measure environmental parameters.</p>
+            </article>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.querySelector('.sidebar');
+            const mainContent = document.querySelector('.main-content');
+        
+            function adjustMainContentMargin() {
+                const sidebarWidth = sidebar.offsetWidth;
+                mainContent.style.marginLeft = `${sidebarWidth}px`;
+            }
+        
+            // Adjust margin on page load
+            adjustMainContentMargin();
+        
+            // Add event listeners to toggle buttons
+            document.querySelectorAll('.toggle').forEach(item => {
+                item.addEventListener('click', event => {
+                    const target = document.querySelector(item.getAttribute('data-target'));
+                    if (target) {
+                        event.preventDefault();
+                        target.classList.toggle('expanded');
+                        adjustMainContentMargin(); // Adjust margin after expanding/collapsing
+        
+                        // Save the opened/closed state in localStorage
+                        saveSidebarState();
+                    }
+        
+                    const url = item.getAttribute('data-url');
+                    if (url) {
+                        window.location.href = url;
+                    }
+                });
+            });
+        
+            // Adjust margin on window resize
+            window.addEventListener('resize', adjustMainContentMargin);
+        
+            // Function to save sidebar state
+            function saveSidebarState() {
+                const expandedItems = [];
+                document.querySelectorAll('.expanded').forEach(el => {
+                    expandedItems.push(el.id);
+                });
+                localStorage.setItem('sidebarState', JSON.stringify(expandedItems));
+            }
+        
+            // Function to restore sidebar state
+            function restoreSidebarState() {
+                const savedState = localStorage.getItem('sidebarState');
+                if (savedState) {
+                    const expandedItems = JSON.parse(savedState);
+                    expandedItems.forEach(id => {
+                        const item = document.getElementById(id);
+                        if (item) {
+                            item.classList.add('expanded');
+                        }
+                    });
+                    adjustMainContentMargin();
+                }
+            }
+        
+            // Restore sidebar state on page load
+            restoreSidebarState();
+        });
+        </script>
+</body>
+</html>

@@ -60,36 +60,47 @@
                 <h1>Building with acrylic and Raspberry Pi</h1>
             </header>
             <article>
-                <img src="images/tower_im1.jpeg" alt="Example Image" style="width:100%; max-width:200px;">
+
+                <p>In this guide, we will detail how to build the complete "tower" BuzzWatch set-up, that be used either in a climatic chamber (see below) or in an insectarium. For other version with control of the light with LED-strip, see 1.6 </p>
+
+                <img src="images/tower/tower_montage.png" alt="Example Image" style="width:100%; max-width:700px;">
                 <ul>
                     <li><a href="#design-cage">1.1 - Design Acrylic Cage</a></li>
                     <li><a href="#laser-cut">1.2 - Laser Cut Acrylic</a></li>
                     <li><a href="#assembly">1.3 - Cage Assembly</a></li>
                     <li><a href="#raspberry-pi">1.4 - Raspberry Pi Camera Set-Up</a></li>
-                    <li><a href="#optional-light">1.5 - [Optional] Raspberry Pi to Light</a></li>
-                    <li><a href="#optional-measure">1.6 - [Optional] Raspberry Pi to Measure the Environment</a></li>
+                    <li><a href="#incubator">1.5 - Complete set-up for incubator </a></li>
+                    <li><a href="#insectarium">1.6 - Complete set-up with home-made container </a></li>
+                    <li><a href="#optional-measure">1.7 - [Optional] Raspberry Pi to Measure the Environment</a></li>
+                    <li><a href="#list-components">Complete list of materials</a></li>
                 </ul>
 
                 
 
 
-                <h2 id="design-cage">1 - Design Acrylic Cage</h2>
+                <h2 id="design-cage">1.1 - Design Acrylic Cage</h2>
                 <p>The plan to use for laser cutting acrylic are vector .ai illustrator files, such as this one </p>
                 <img src="images/Plan_illustrator_example.jpeg" alt="Cage_illustrator_file_example" style="width:100%; max-width:600px;">
                 <!-- Download Link for .ai File -->
                 <p>All necessary files can be downloaded below: </p>
-                <a href="downloads/attach_towers.ai" download>attach_towers.ai</a>
-                <a href="downloads/Longtermv5_part1_3mm_diff.ai" download>Longtermv5_part1_3mm_diff.ai</a>
-                <a href="downloads/Longtermv5_part2_3mm_diff.ai" download>Longtermv5_part2_3mm_diff.ai</a>
-                <a href="downloads/Longtermv5_part3_3mm_trans.ai" download>Longtermv5_part3_3mm_trans.ai</a>
-                <a href="downloads/Longtermv5_part4_1mm.ai" download>Longtermv5_part4_1mm.ai</a>
+                <ul>
+                    <li><a href="downloads/buzzwatch_tower_part1_3mm.ai" download>buzzwatch_tower_part1_3mm.ai</a></li>
+                    <li><a href="downloads/buzzwatch_tower_part2_3mm.ai" download>buzzwatch_tower_part2_3mm.ai</a></li>
+                    <li><a href="downloads/buzzwatch_tower_part3_3mm.ai" download>buzzwatch_tower_part3_3mm.ai</a></li>
+                    <li><a href="downloads/buzzwatch_tower_part4_1mm.ai" download>buzzwatch_tower_part4_1mm.ai</a></li>
+                </ul>
+                
+                
+                
+                
+                
 
                 <p> Most of the cage designs are based on this website <a href="https://boxes.hackerspace-bamberg.de" target="_blank">Boxes.py</a>.</p>
 
                 <p>All plans have been designed for 3mm PPMA or 1.5mm and a burn correction of 0.01. However, depending on the model of laser cutter or your specific design, you might have to modify the burning correction for a looser or tighter fit.</p>
                 <p><img src="images/boxpy_burning_change.jpg" alt="burning_correction" style="width:100%; max-width:600px;"></p>
 
-                <h2 id="laser-cut">Laser Cut Acrylic</h2>
+                <h2 id="laser-cut">1.2 Laser Cut Acrylic</h2>
                 <!-- Insert a .MP4 Video -->
                 <video controls width="600">
                     <source src="videos/laser_cutter_movie_1.mp4" type="video/mp4">
@@ -100,28 +111,128 @@
                 <p>Pre-assemble cage and test if it fits properly (it should stay together) [add video]</p>
                 <p><img src="images/cage_assemble_1.jpeg" alt="burning_correction" style="width:100%; max-width:600px;"></p>
 
-                <h2 id="assembly">Cage Assembly</h2>
-                <p>Once the laser cutting is finished, you can assemble most of the cage structure without glue.</p>
-
-                <p>Assemble sugar feeders and glue them.</p>
-                <p>Add 1.5mm windows. For the 1.5mm windows, it is necessary to glue them properly.</p>
-                <p>Assemble the main cage (no need for glue).</p>
-                <p>Assemble the structure and glue frames.</p>
-                <p>Add the holder for the cage and sugar feeders.</p>
+                <h2 id="assembly">1.3 Cage Assembly</h2>
                 
-                <h2 id="raspberry-pi">Raspberry Pi Camera Set-Up</h2>
                 <ul>
-                    <li>Raspberry Pi 4B+ : link</li>
-                    <li>PiCamera NOIR v2</li>
-                    <li>Camera connector</li>
-                    <li>IR filter</li>
-                    <li>External hard drive to store videos (T7 Samsung)</li>
+                    <li> a - Assemble the main cage with the 1.5mm windows and holders.</li>
+                    <p><img src="images/build_acrylic/Cage_build.png" alt="Cage" style="width:100%; max-width:600px;"></p>
+
+                    <li> a bis - Assemble holder for base cage.</li>
+                    <p><img src="images/build_acrylic/base_cage_build.png" alt="base_cage" style="width:100%; max-width:600px;"></p>
+
+                    <li> b - Assemble sugar feeders and glue them.</li>
+                    <p><img src="images/sugar_feeder_assembly.png" alt="sugar" style="width:100%; max-width:600px;"></p>
+
+                    <li> c - Assemble the first support structure (holding camera and cage) and glue frames.</li>
+                    <p><img src="images/build_acrylic/base_1_build.png" alt="Cage" style="width:100%; max-width:600px;"></p>
+
+                    <li> d - Assemble the second support structure (surrounding cage) and glue frames.</li>
+                    <p><img src="images/build_acrylic/base_2_build.png" alt="Cage" style="width:100%; max-width:600px;"></p>
+
+                    <li> e - Final assembly.</li>
+                    <p><img src="images/build_acrylic/assembly.png" alt="assembly" style="width:100%; max-width:600px;"></p>
+                </ul>
+                
+
+
+
+
+
+
+                <h2 id="raspberry-pi">1.4 Raspberry Pi, Camera and light</h2>
+                
+                <ul>
+                    <li> a - Copy the BuzzWatch image on the raspberry Pi on the </li>
+                    <li> b - Connect camera to Raspberry Pi</li>
+                    <li> c - Put camera in the holder</li>
+                    <li> d - Add infrared bandpass filter</li>
+                    <li> e - Add Raspberri Pi case with fan</li>
+                    <li> f - Put camera in the holder</li>
+                    <li> g - Add infrared light</li>
+                    <li> h - Plug External hard drive to store videos</li>
                 </ul>
 
-                <h2 id="optional-light">[Optional] Raspberry Pi to Light</h2>
+                To continue direclty to setting up the camera and recording, go to 3 - Recording.
+
+                <h2 id="optional-light">1.5 [Optional] Raspberry Pi to Light</h2>
+
+                <img src="images/complete_setup_insectarium.jpeg" alt="Cage_illustrator_file_example" style="width:100%; max-width:600px;">
+
                 <p>Instructions for setting up Raspberry Pi to control lights.</p>
 
-                <h2 id="optional-measure">[Optional] Raspberry Pi to Measure the Environment</h2>
+                <h2 id="optional-measure">1.6 [Optional] Raspberry Pi to Measure the Environment</h2>
+
+
+                <h2 id="list-components">Complete list of materials required</h2>
+
+                <h1>List of Materials</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Material</th>
+                            <th>Cost</th>
+                            <th>Image</th>
+                            <th>Purchase Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Raspberry Pi 4B+ (Adapter, Case with fans, small heat dissipater)</td>
+                            <td>$XX.XX</td>
+                            <td class="image-cell"><img src="images/raspberry_pi_4b.jpg" alt="Raspberry Pi 4B+"></td>
+                            <td class="url-cell"><a href="https://www.pishop.us/product/raspberry-pi-4-model-b-2gb/" target="_blank">Buy here</a></td>
+                        </tr>
+                        <tr>
+                            <td>64GB microSD card. SanDisk Ultra A1 MicroSDXC</td>
+                            <td>$XX.XX</td>
+                            <td class="image-cell"><img src="images/sandisk_64gb_microsd.jpg" alt="SanDisk Ultra A1 MicroSDXC"></td>
+                            <td class="url-cell"><a href="https://www.amazon.com/SanDisk-64GB-microSDXC-Memory-Adapter/dp/B073JWXGNT/" target="_blank">Buy here</a></td>
+                        </tr>
+                        <tr>
+                            <td>Raspberry Pi NoIR Camera Board v2 - 8 Megapixels (+ mpi connector)</td>
+                            <td>$XX.XX</td>
+                            <td class="image-cell"><img src="images/raspberry_pi_noir.jpg" alt="Raspberry Pi NoIR Camera Board v2"></td>
+                            <td class="url-cell"><a href="https://www.adafruit.com/product/3100" target="_blank">Buy here</a></td>
+                        </tr>
+                        <tr>
+                            <td>512GB SSD external hard drive (Samsung Portable SSD T7)</td>
+                            <td>$XX.XX</td>
+                            <td class="image-cell"><img src="images/samsung_t7_ssd.jpg" alt="Samsung Portable SSD T7"></td>
+                            <td class="url-cell"><a href="https://www.samsung.com/us/computing/memory-storage/portable-solid-state-drives/portable-ssd-t7-usb-3-2-512gb-mu-pc500t/" target="_blank">Buy here</a></td>
+                        </tr>
+                        <tr>
+                            <td>Long Pass Filter 850nm. (25mm diameter FGL850M Thorlabs)</td>
+                            <td>$XX.XX</td>
+                            <td class="image-cell"><img src="images/thorlabs_long_pass_filter.jpg" alt="Thorlabs Long Pass Filter 850nm"></td>
+                            <td class="url-cell"><a href="https://www.thorlabs.com/thorproduct.cfm?partnumber=FGL850M" target="_blank">Buy here</a></td>
+                        </tr>
+                        <tr>
+                            <td>Case camera Adafruit Raspberry Pi P3253 (gotronic)</td>
+                            <td>$XX.XX</td>
+                            <td class="image-cell"><img src="images/adafruit_case.jpg" alt="Adafruit Raspberry Pi P3253"></td>
+                            <td class="url-cell"><a href="https://www.adafruit.com/product/3253" target="_blank">Buy here</a></td>
+                        </tr>
+                        <tr>
+                            <td>Camera strip RB-CAM-1000 35861 Gotronic (1m version)</td>
+                            <td>$XX.XX</td>
+                            <td class="image-cell"><img src="images/camera_strip.jpg" alt="RB-CAM-1000 35861 Gotronic"></td>
+                            <td class="url-cell"><a href="https://www.gotronic.fr/art-rallonge-rpi-camera-35861.htm" target="_blank">Buy here</a></td>
+                        </tr>
+                        <tr>
+                            <td>Rpi 4 case Joy-it . CASEP4+3B 36489</td>
+                            <td>$XX.XX</td>
+                            <td class="image-cell"><img src="images/joy_it_case.jpg" alt="Joy-it CASEP4+3B 36489"></td>
+                            <td class="url-cell"><a href="https://www.gotronic.fr/art-boitier-joy-it-pour-raspberry-pi-4-36489.htm" target="_blank">Buy here</a></td>
+                        </tr>
+                        <tr>
+                            <td>USB-C Power supply 5.1V 3A (official Rpi supply)</td>
+                            <td>$XX.XX</td>
+                            <td class="image-cell"><img src="images/raspberry_pi_usbc_power.jpg" alt="USB-C Power supply 5.1V 3A"></td>
+                            <td class="url-cell"><a href="https://www.raspberrypi.org/products/type-c-power-supply/" target="_blank">Buy here</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
                 <p>Instructions for setting up Raspberry Pi to measure environmental parameters.</p>
             </article>
         </div>

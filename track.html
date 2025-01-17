@@ -68,6 +68,106 @@
                     <li><a href="#run-batch">4.4 - Run analysis in batch</a></li>
                     <li><a href="#quality-check">4.5 - QC</a></li>
                 </ul>
+
+
+
+                <h2 id="Install-package">4.1 - Download and set-up BuzzWatch app</h2>
+
+
+
+                <h2 id="Install-package">4.2 - Preliminary analysis</h2>
+
+                <p>a. Activate the virtual environment "conda activate buzzwatch_env"</p>
+                <p>b. Go to the folder where the app is "cd path_to_buzzwatch_app"</p>
+                <p>c. Start the app "python3 buzzwatch_analysis_app.py"</p>
+                The starting window looks like this :
+
+                <img src="images/experiment_analysis_tutorials/setup_01.jpg" alt="Example Image" style="width:100%; max-width:1000px;">
+
+
+                <p>d. First thing is to put the .mp4 videos in a folder structured this way : "ROOT_FOLDER_VIDEOS/EXPERIMENT_NAME/CAGE_NAME/BATCH_NAME</p>
+                <p>For instance the path to the video should look like this one : "/Volumes/T7/240814_KPP_BM_EggLaying/Cage01_NoEL_A/batch_1"</p>
+
+                <img src="images/experiment_analysis_tutorials/setup_02.jpg" alt="Example Image" style="width:100%; max-width:1000px;">
+
+                <p>The "BATCH_NAME" usually corresponds to different weeks of recording, in between sugar feeder change (and potentially moving the cages, causing background modification) </p>
+                
+                <p>e. Choose a folder "ROOT_FOLDER_ANALYSIS" where all the analyzed data will be and copy all the info in app </p>
+                
+                <img src="images/experiment_analysis_tutorials/setup_03.jpg" alt="Example Image" style="width:100%; max-width:1000px;">
+
+                The "Settings YAML File" should the path to a template "buzzwatch_track_settings.yml" used for another analysis. If it's the first analysis, you can download such a file here :
+                <li><a href="images/experiment_analysis_tutorials/buzzwatch_track_settings.yml" download>buzzwatch_track_settings.yml</a></li>
+                
+
+                <p>f. Click on "Initialize New Experiment". Then it should look like this in the analysis folder created</p>
+
+                <img src="images/experiment_analysis_tutorials/setup_04.jpg" alt="Example Image" style="width:100%; max-width:1000px;">
+
+                <p>It created the path for analysis and a .json file with all information entered above. It's possible to edit directly this file to start a new analysis. In that case you just need to create the correct folder strucutre for the analysis path and copy a "buzzwatch_track_settings.yml" and a "experiment_name.json" yourself in that folder </p>
+
+                <img src="images/experiment_analysis_tutorials/setup_06.jpg" alt="Example Image" style="width:100%; max-width:1000px;">
+
+                <p> In this case or if the app was closed after initializing the experiment analysis, you can start it by clicking "Load Existing Experiment" and looking for the .json file</p>
+
+                <img src="images/experiment_analysis_tutorials/setup_07.jpg" alt="Example Image" style="width:100%; max-width:1000px;">
+
+                <p> Then by going on the tab "Video Inspection" you scroll through the .mp4 videos</p>
+
+                <img src="images/experiment_analysis_tutorials/setup_05.jpg" alt="Example Image" style="width:100%; max-width:1000px;">
+
+                <p> Switch to "Preliminary analysis" tab, and "Extract Images from Video" sub-tab, and click on "Run", this will extract 1 image per .mp4 video</p>
+
+                <p> To visualize the images, you can click on "Update image list" and scroll. You can also find the images directly in the "individual_images" folder</p>
+
+                <img src="images/experiment_analysis_tutorials/setup_08.jpg" alt="Example Image" style="width:100%; max-width:1000px;">
+
+                <p> Switch to the "Get Background from Images" tab and click "Run" to compute and save 1 background per videos, from a centered 100 videos window (-50,+50) using the images extracted in the previous step. This operation can take a few minutes</p>
+
+                <img src="images/experiment_analysis_tutorials/setup_09.jpg" alt="Example Image" style="width:100%; max-width:1000px;">
+
+                <p> To visualize the background images, you can click on "Update bck image list" and scroll. You can also find the images directly in the "images_mortality" folder.</p>
+
+                <p> At this stage you can already compute the survival curve using these images, although this is not required for next analysis step. This will be necessary at the "Compare experiments" tab, where it is required to normalizing the time series by the number of alive mosquitoes.</p>
+
+                <p>To generate the excel file to be used as survival curve, see **Insert url link here** </p>
+
+                <p>Here is a video that summarizes the previous steps</p>
+                <video controls width="1000">
+                    <source src="videos/01_loading_exp_running_extraction.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <p> Switch to "Draw Borders" sub-tab. Then click on "Show background with borders". This should show an image such as this one :</p>
+
+                <img src="images/experiment_analysis_tutorials/setup_10.jpg" alt="Example Image" style="width:100%; max-width:1000px;">
+
+                It is using one of the background image generated earlier and the coordinates information of the different borders as defined in the "buzzwatch_track_settings.yml" file. At this stage this file might correspond to a different dataset so the borders should not match exactly.
+                To adjust precisely the borders, click on "Draw Cage Borders". Then left click on the 4 edges successively. Once you are done, press "s" on the keyboard. The updated border should show up. If it's not correct, just re-start it. Only the last edit will be automatically saved to the buzzwatch_track_settings.yml file.
+
+
+                <p>Here is a video of the process : </p>
+                <video controls width="1000">
+                    <source src="videos/02_drawing_borders_trim.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+
+                <p>Switch to the "Single Video Tracking" subtab, you can select a video in the window "Videos files...", then click on Analyze Video. This should look like this </p>
+
+                <img src="images/experiment_analysis_tutorials/setup_11.jpg" alt="Example Image" style="width:100%; max-width:1000px;">
+
+                <p>Once the analysis is finished (notification in the log window below), click on "Update tracking results" to display the completed tracking files in the "Final Tracking Files"  </p>
+
+                <video controls width="1000">
+                    <source src="videos/03_single_video_analysis.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <p> Once you analyzed a few representative videos, and that the result is satisfying, you can start analyze in batch mode</p>
+
+
+
             </article>
         </div>
     </div>

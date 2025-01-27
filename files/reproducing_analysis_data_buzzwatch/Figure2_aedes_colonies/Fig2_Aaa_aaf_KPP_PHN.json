@@ -1,0 +1,65 @@
+{
+    "root_folder": "/Users/tmaire/Documents/BuzzWatch_analysis/ANALYZED/buzzwatch_paper_reproducible_analysis/experiments_data_lists",
+    "num_experiments": "6",
+    "experiments": [
+        {
+            "path": "230602_COL_ZIK_PHN_KAK/Cage01_PHN",
+            "alias": "Cage01_PHN_1",
+            "group": "PHN",
+            "category": "Ae_aegypti_aegypti",
+            "start_date": "2023-06-09",
+            "end_date": "2023-06-18"
+        },
+        {
+            "path": "230704_KPP_KUM/Cage01_KPP_1",
+            "alias": "Cage01_KPP_1",
+            "group": "KPP",
+            "category": "Ae_aegypti_aegypti",
+            "start_date": "2023-07-14",
+            "end_date": "2023-07-23"
+        },
+        {
+            "path": "230704_KPP_KUM/Cage04_KPP_2",
+            "alias": "Cage04_KPP_2",
+            "group": "KPP",
+            "category": "Ae_aegypti_aegypti",
+            "start_date": "2023-07-14",
+            "end_date": "2023-07-23"
+        },
+        {
+            "path": "230804_RAB_PHN_ABP_AGP/Cage04_PHN",
+            "alias": "Cage04_PHN_2",
+            "group": "PHN",
+            "category": "Ae_aegypti_aegypti",
+            "start_date": "2023-08-06",
+            "end_date": "2023-08-15"
+        },
+        {
+            "path": "230921_KUM_KPP_RAB_PHN/Cage02_KPP",
+            "alias": "Cage02_KPP_1",
+            "group": "KPP",
+            "category": "Ae_aegypti_aegypti",
+            "start_date": "2023-09-24",
+            "end_date": "2023-10-03"
+        },
+        {
+            "path": "230921_KUM_KPP_RAB_PHN/Cage04_PHN",
+            "alias": "Cage04_PHN_3",
+            "group": "PHN",
+            "category": "Ae_aegypti_aegypti",
+            "start_date": "2023-09-24",
+            "end_date": "2023-10-03"
+        }
+    ],
+    "num_groups": "2",
+    "groups": [
+        {"alias": "PHN", "color": "tab:pink", "marker": "."},
+        {"alias": "KPP", "color": "tab:blue", "marker": "s"}
+
+      ],
+    "num_categories": "2",
+    "categories": [
+        {"alias": "Ae_aegypti_aegypti", "color": "tab:blue", "marker": "s"},
+        {"alias": "Ae_aegypti_formosus", "color": "tab:orange", "marker": "o"}
+      ]
+}

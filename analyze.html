@@ -69,6 +69,47 @@
                     <li><a href="#trend">5.4 - Long-term trends</a></li>
                     <li><a href="#diff-cond">5.5 - Comparing different conditions</a></li>
                 </ul>
+
+
+                <h2 id="#time-series">5.2 - Time series</h2>
+
+                <p>After concatenating the tracking files from all the videos, you should end up with a single file called "analyzed_data.pkl"</p>
+
+                <p>Before loading that file in the app, you should count the number of dead mosquitoes over the course of the experiments. 
+                The data should be stored in a excel file that looks like below and which name starts with "death_count", such as this one </p>
+
+                <li><a href="images/experiment_analysis_tutorials/05_Analysis_compare_experiments/death_count.xlsx" download>death_count.xlsx</a></li>
+                
+                <img src="images/experiment_analysis_tutorials/05_Analysis_compare_experiments/00_analyze.jpg" alt="Example Image" style="width:100%; max-width:300px;">
+
+                <p>To count the number of dead mosquitos you can either do it directly by checking the cage every week upon changing the sugar
+                     feeder, or you can also extract it from the background images generated in the tracking steps earlier. Indeed in the
+                      "images_mortaliy" folder, you will find one background image per video. By design, mosquitoes that show up in these images
+                    did not move over 100 videos, i.e. 30hours, which is equivalent to being declared a dead mosquito. For instance in this image, 
+                there is 3 dead mosquitoes. The easiest way is go day by day (1 day 1 line), by checking only the images corresponding to a fixed time of the day. 
+                The smartest way is to pick that time to be the peak activity of you mosquitos populations, since at that time pretty much all alive mosquitos fly a long-term
+                and will not be visible in the background image for sure. </p>
+                
+                <img src="images/experiment_analysis_tutorials/05_Analysis_compare_experiments/01_analyze.jpg" alt="Example Image" style="width:100%; max-width:1000px;">
+
+                <p> Then by scrolling through all the background images it is usually straightforward to see when there is a new dead mosquitos, as you can see in this video :</p>
+
+                <video controls width="1000">
+                    <source src="images/experiment_analysis_tutorials/05_Analysis_compare_experiments/scrolling_mortality.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <p></p>
+
+
+
+
+
+
+
+
+
+
             </article>
         </div>
     </div>

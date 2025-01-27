@@ -77,16 +77,28 @@
 
                 <h2 id="Install-package">4.2 - Preliminary analysis</h2>
 
-                <p>a. Activate the virtual environment "conda activate buzzwatch_env"</p>
-                <p>b. Go to the folder where the app is "cd path_to_buzzwatch_app"</p>
-                <p>c. Start the app "python3 buzzwatch_analysis_app.py"</p>
-                The starting window looks like this :
+                <p>a. Activate the virtual environment:</p>
+                <pre><code>conda activate buzzwatch_env</code></pre>
+
+                <p>b. Go to the folder where the app is:</p>
+                <pre><code>cd path_to_buzzwatch_app</code></pre>
+
+                <p>c. Start the app:</p>
+                <pre><code>python3 buzzwatch_analysis_app.py</code></pre>
+
+                The starting window looks like this:
 
                 <img src="images/experiment_analysis_tutorials/setup_01.jpg" alt="Example Image" style="width:100%; max-width:1000px;">
 
+                <p>d. First, organize your .mp4 videos in folders with the following structure:</p>
+                <pre><code>ROOT_FOLDER_VIDEOS/
+└── EXPERIMENT_NAME/
+    └── CAGE_NAME/
+        └── BATCH_NAME/
+            └── video_files.mp4</code></pre>
 
-                <p>d. First thing is to put the .mp4 videos in a folder structured this way : "ROOT_FOLDER_VIDEOS/EXPERIMENT_NAME/CAGE_NAME/BATCH_NAME</p>
-                <p>For instance the path to the video should look like this one : "/Volumes/T7/240814_KPP_BM_EggLaying/Cage01_NoEL_A/batch_1"</p>
+                <p>For example, a video path might look like this:</p>
+                <pre><code>/Volumes/T7/240814_KPP_BM_EggLaying/Cage01_NoEL_A/batch_1/video_001.mp4</code></pre>
 
                 <img src="images/experiment_analysis_tutorials/setup_02.jpg" alt="Example Image" style="width:100%; max-width:1000px;">
 

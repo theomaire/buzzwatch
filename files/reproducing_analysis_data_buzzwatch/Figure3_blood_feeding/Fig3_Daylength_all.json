@@ -1,0 +1,39 @@
+{
+    "root_folder": "/Users/tmaire/Documents/BuzzWatch_analysis/ANALYZED/buzzwatch_paper_reproducible_analysis/experiments_data_lists",
+    "num_experiments": "2",
+    "experiments": [
+        {
+            "path": "231015_DayLength_change/Cage01_KPP_1",
+            "alias": "Cage01",
+            "group": "all",
+            "category": "all_data",
+            "start_date": "2023-10-18",
+            "end_date": "2023-11-06"
+        },
+        {
+            "path": "231015_DayLength_change/Cage04_KPP_4",
+            "alias": "Cage02",
+            "group": "all",
+            "category": "all_data",
+            "start_date": "2023-10-18",
+            "end_date": "2023-11-06"
+        }
+    ],
+    "num_groups": "1",
+    "groups": [
+        {
+            "alias": "all",
+            "color": "tab:blue",
+            "marker": "o"
+        }
+
+    ],
+    "num_categories": "1",
+    "categories": [
+        {
+            "alias": "all_data",
+            "color": "tab:blue",
+            "marker": "."
+        }
+    ]
+}
